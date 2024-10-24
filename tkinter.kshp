@@ -1,0 +1,30 @@
+class Window {
+    func init() {
+        python(win = tk.Tk());
+    }
+    func mainloop() {
+        python(win.mainloop());
+    }
+}
+class Item {
+    var id = 0;
+    var y_pos = 0;
+    var x_pos = 0;
+    var name = "";
+}
+class Button : Item {
+    func init() {
+        python(bttself.id = tk.Button(win, text='self.name'));
+    }
+    func grid() {
+        python(bttself.id.grid(row=self.y_pos, column=self.x_pos));
+    }
+}
+class Text : Item {
+    func init() {
+        python(textself.id = tk.Label(win, text='self.name'));
+    }
+    func grid() {
+        python(textself.id.grid(row=self.y_pos, column=self.x_pos));
+    }
+}
